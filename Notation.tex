@@ -1,0 +1,48 @@
+\documentclass[11pt, english, fleqn, DIV=15, headinclude]{scrartcl}
+
+\usepackage[bibatend, color]{header}
+
+\hypersetup{
+    pdftitle=
+}
+
+% http://tex.stackexchange.com/a/42620
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\yes}{\ding{51}}%
+\newcommand{\no}{\ding{55}}%
+
+%\subject{}
+\title{Summary of notations}
+%\subtitle{}
+\author{
+    Martin Ueding \\ \small{\href{mailto:mu@martin-ueding.de}{mu@martin-ueding.de}}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{tabular}{cccccc}
+    Class & Examples & italic & serif & bold & underline \\
+    \midrule
+    Scalar & $x$, $\lambda$                & \yes & \yes & \no  & \no  \\
+    Vector & $\vec v$, $\vec F$            & \yes & \yes & \yes & \no  \\
+    Matrix & $\vec A$, $\vec M$            & \yes & \yes & \yes & \no  \\
+    4-Vector & $\four v$, $\four P$        & \yes & \yes & \yes & \yes \\
+    Tensor & $\tens G$, $\tens T$          & \yes & \no  & \yes & \no  \\
+    Field & $\R$, $\C$                     & \no  & \no  & \yes & \no  \\
+\end{tabular}
+
+\paragraph{Why the underline?}
+
+I try to stick close to ISO 80000-2. One problem I have in Physics are the
+three-vectors and four-vectors. Mathematically they are just from $\R^3$ and
+$\R^4$ respectively and they are both vectors. One sometimes has equations like
+$\four x \cdot \four p = x^0 p^0 - \vec x \cdot \vec p$. This would not be
+clear if one write $\vec x \cdot \vec p$ or $x \cdot p$ on the left side, I
+think.
+
+
+\end{document}
+
+% vim: spell spelllang=en tw=79
